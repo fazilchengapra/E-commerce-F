@@ -57,7 +57,7 @@ const charts = [
 
 const Charts = () => {
   return (
-    <div className="w-full grid grid-cols-3 gap-4 mt-5">
+    <div className="w-full grid grid-cols-3 gap-4">
       {charts.map((item) => (
         <div
           key={item.name}
