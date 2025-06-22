@@ -17,10 +17,9 @@ export default function RootLayout({
       <body className="bg-[#F9FAFB]">
         <div className="h-screen">
           <Nav />
-        {children}
+          {children}
         </div>
       </body>
     </html>
   );
 }
-
