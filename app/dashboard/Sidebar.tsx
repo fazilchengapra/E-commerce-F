@@ -1,23 +1,40 @@
 import React from "react";
-import { ChartPie, ShoppingBag, Mail, UsersRound, Box, ScrollText } from "lucide-react";
+import {
+  ChartPie,
+  ShoppingBag,
+  Mail,
+  UsersRound,
+  Box,
+  ScrollText,
+} from "lucide-react";
 import SidebarContent from "@/components/SidebarContent";
 
 const Sidebar = () => {
   const data = [
-    { name: "Overview", icon: <ChartPie size={18} strokeWidth="3px" /> },
+    { name: "overview", icon: <ChartPie size={18} strokeWidth="3px" />, sub:false },
     {
-      name: "Users",
+      name: "users",
       icon: <UsersRound size={18} strokeWidth="3px" />,
+      sub:false
     },
     {
-      name: "Sales",
+      name: "sales",
       icon: <ShoppingBag size={18} strokeWidth="3px" />,
+      sub: false,
       items: [
-        { name: "Products", icon: <Box size={16} strokeWidth="2px" /> },
-        { name: "Invoice", icon: <ScrollText size={16} strokeWidth="2px" /> },
+        {
+          name: "products",
+          sub: true,
+          icon: <Box size={16} strokeWidth="2px" />,
+        },
+        {
+          name: "invoice",
+          sub: true,
+          icon: <ScrollText size={16} strokeWidth="2px" />,
+        },
       ],
     },
-    { name: "Messages", icon: <Mail size={18} strokeWidth="3px" /> },
+    { name: "messages", icon: <Mail size={18} strokeWidth="3px" /> },
   ];
 
   return (
