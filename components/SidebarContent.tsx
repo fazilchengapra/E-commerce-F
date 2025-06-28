@@ -17,6 +17,7 @@ const SidebarContent = ({ data }: { data: SidebarItem[] }) => {
   const currentSubPage = useSelector(
     (store: RootState) => store.nav.currentSubPage
   );
+  const isOpen = useSelector((store: RootState) => store.nav.sideBar);
   const dispatch = useDispatch();
 
   return (
@@ -43,7 +44,7 @@ const SidebarContent = ({ data }: { data: SidebarItem[] }) => {
               }`}
             >
               <div> {item?.icon}</div>
-              <div>{item.name}</div>
+              {isOpen && <div>{item.name}</div>}
               <div>
                 {item.items &&
                   item.items.length > 0 &&

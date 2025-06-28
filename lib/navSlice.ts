@@ -5,6 +5,7 @@ const navSlice = createSlice({
   initialState: {
     currentPage: "overview",
     currentSubPage: "",
+    sideBar: false,
   },
   reducers: {
     setCurrentPage: (state, action) => {
@@ -13,8 +14,11 @@ const navSlice = createSlice({
     setCurrentSubPage: (state, action) => {
       state.currentSubPage = action.payload;
     },
+    setSideBar: (state) => {
+      state.sideBar = !state.sideBar;
+    },
   },
 });
 
-export const { setCurrentPage, setCurrentSubPage } = navSlice.actions;
+export const { setCurrentPage, setCurrentSubPage, setSideBar } = navSlice.actions;
 export default navSlice.reducer;

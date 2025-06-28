@@ -19,11 +19,11 @@ const SaleChart = ({ data }: SaleChartProps) => {
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
         >
           <CartesianGrid stroke="#F3F4F6" vertical={false} />
-          <XAxis dataKey="name" tickLine={false} axisLine={false} />
-          <YAxis tickLine={false} axisLine={false} />
+          <XAxis dataKey="name" tickLine={false} axisLine={false} className="text-xs lg:text-lg"/>
+          <YAxis tickLine={false} axisLine={false} className="hidden lg:block"/>
           <Tooltip
             cursor={{
               stroke: "#E9EBEE",

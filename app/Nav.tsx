@@ -1,16 +1,19 @@
 "use client";
 import { Search, PanelLeft, Bell, AlignJustify  } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage  } from "@/components/ui/avatar";
+import { useDispatch } from "react-redux";
+import { setSideBar } from "@/lib/navSlice";
 
 const Nav = () => {
+  const dispatch = useDispatch()
   return (
-    <div className="w-full h-fit pb-2 border bg-white">
-      <div className="flex items-center mt-3 mx-4">
+    <div className="w-full h-fit pb-2 border bg-white fixed lg:static z-100">
+      <div className="flex items-center mt-3 mx-2 lg:mx-4">
         <div className="w-1/2 flex items-center gap-4">
-          <div className="hidden lg:block">
+          <div className="hidden lg:block" onClick={() => dispatch(setSideBar())}>
             <PanelLeft />
           </div>
-          <div className="block lg:hidden">
+          <div className="block lg:hidden" onClick={() => dispatch(setSideBar())}>
             <AlignJustify  />
           </div>
           <div className="w-1/2 relative select-none hidden lg:block">
