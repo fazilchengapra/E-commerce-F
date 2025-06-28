@@ -24,7 +24,7 @@ const Sales = () => {
         {/* Header */}
         <div className="flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center px-2">
           <div className="flex items-center gap-2">
-            <h2 className="text-xl lg:text-lg font-bold">Sales</h2>
+            <h2 className="text-xl lg:text-lg font-extrabold lg:font-bold">Sales</h2>
             <CircleAlert className="size-5 lg:size-4" color="#A1A8B3" />
           </div>
 

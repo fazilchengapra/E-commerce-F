@@ -66,7 +66,7 @@ const Charts = () => {
           <div className="flex flex-row justify-between mx-3 items-center mt-5">
             <div className="flex flex-col gap-1">
               <div>
-                <h2 className="text-2xl font-bold">₹2000</h2>
+                <h2 className="text-4xl lg:text-2xl lg:font-bold font-extrabold">₹2000</h2>
               </div>
               <div className="text-[#4B5563]">{item.name}</div>
             </div>
