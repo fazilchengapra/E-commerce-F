@@ -16,13 +16,14 @@ const SaleChart = ({ data }: SaleChartProps) => {
 
   return (
     <div className="w-full h-full">
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%" >
         <LineChart
           data={data}
           margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
+          className='left-[-20] lg:left-0'
         >
           <CartesianGrid stroke="#F3F4F6" vertical={false} />
-          <XAxis dataKey="name" tickLine={false} axisLine={false} className="text-xs lg:text-lg"/>
+          <XAxis dataKey="name" tickLine={false} axisLine={false} className="text-[10px] lg:text-lg"/>
           <YAxis tickLine={false} axisLine={false} className="hidden lg:block"/>
           <Tooltip
             cursor={{

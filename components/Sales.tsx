@@ -20,9 +20,9 @@ const Sales = () => {
 
   return (
     <div className="rounded-md w-full bg-white mt-12 lg:mt-0 pt-6 outline-1 outline-[#ECEDEE]">
-      <div className="px-2 lg:px-5 space-y-4">
+      <div className="lg:px-5 space-y-4">
         {/* Header */}
-        <div className="flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center">
+        <div className="flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center px-2">
           <div className="flex items-center gap-2">
             <h2 className="text-xl lg:text-lg font-bold">Sales</h2>
             <CircleAlert className="size-5 lg:size-4" color="#A1A8B3" />
@@ -61,7 +61,7 @@ const Sales = () => {
         </div>
 
         {/* Chart */}
-        <div className="h-96 lg:h-72">
+        <div className="h-96 lg:h-72 w-full">
           {" "}
           <SaleChart data={data} />
         </div>

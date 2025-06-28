@@ -4,7 +4,7 @@ import PieChartt from "./PieChartt";
 
 const CustomerSessions = () => {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="flex lg:flex-none flex-col lg:grid grid-cols-3 gap-4">
       <div className="col-span-2 rounded-md w-full bg-white outline-1 outline-[#ECEDEE] h-auto">
         <LatestCustomers />
       </div>
